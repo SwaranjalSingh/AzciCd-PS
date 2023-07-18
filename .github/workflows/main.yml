@@ -18,7 +18,7 @@ jobs:
     - name: Login Azure
       uses: azure/login@v1
       with:
-        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}"}'
         enable-AzPSSession: true 
 
     - name: Run Azure PowerShell Script File

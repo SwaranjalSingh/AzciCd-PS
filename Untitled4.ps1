@@ -2,7 +2,7 @@
 # Connect-AzAccount
 
 # Get all VMs in the subscription
-$vmList = Get-AzVM -Status  
+$vmList = az vm list  
 # $VMStatuses = (Get-AzVM -ResourceGroupName $RGName -Name $VMName -Status). Statuses
 # Iterate through each VM
 foreach ($vm in $vmList) {

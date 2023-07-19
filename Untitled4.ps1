@@ -1,6 +1,6 @@
 ﻿# Connect to your Azure account
 # Connect-AzAccount
-az login
+ az login --username Swara@vikash252outlook.onmicrosoft.com --password Ss123456789@!
 # Get all VMs in the subscription
 $vmList = az vm list  
 # $VMStatuses = (Get-AzVM -ResourceGroupName $RGName -Name $VMName -Status). Statuses

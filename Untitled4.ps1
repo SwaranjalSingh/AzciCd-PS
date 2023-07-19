@@ -1,6 +1,6 @@
 ﻿# Connect to your Azure account
 # Connect-AzAccount
-
+az login
 # Get all VMs in the subscription
 $vmList = az vm list  
 # $VMStatuses = (Get-AzVM -ResourceGroupName $RGName -Name $VMName -Status). Statuses
@@ -20,5 +20,7 @@ foreach ($vm in $vmList) {
     Write-Host "------------------------------"
 }
 # disConnect to your Azure account
-disconnect-azaccount
+# disconnect-azaccount
+
+az logout
 

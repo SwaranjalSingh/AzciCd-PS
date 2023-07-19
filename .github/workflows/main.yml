@@ -20,5 +20,5 @@ jobs:
     - name: Run Azure PowerShell Script File
       uses: azure/powershell@v1
       with:
-        inlineScript: ./1.ps1
+        inlineScript: ./Untitled4.ps1
         azPSVersion: "latest"

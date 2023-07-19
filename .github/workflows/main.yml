@@ -26,6 +26,10 @@ jobs:
     #   with:
     #     inlineScript: ./Untitled4.ps1
     #     azPSVersion: "latest"
+    - name: Install Az Module
+      run: Install-Module -Name Az -Repository PSGallery -Force
+    - name: Update Az Module
+      run: Update-Module -Name Az -Force
     - name: run powershell script
       run: ./Untitled4.ps1
      

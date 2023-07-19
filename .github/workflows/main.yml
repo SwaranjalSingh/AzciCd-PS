@@ -10,10 +10,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    # - name: Install Azure CLI
-    #   run: |
-    #     curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-    #     az extension add --name azure-devops
+    - name: Install Azure CLI
+      run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+        az extension add --name azure-devops
 
     - name: Login Azure
       uses: azure/login@v1
@@ -21,15 +21,9 @@ jobs:
         creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}"}'
         enable-AzPSSession: true 
 
-    # - name: Run Azure PowerShell Script File
-    #   uses: azure/powershell@v1
-    #   with:
-    #     inlineScript: ./Untitled4.ps1
-    #     azPSVersion: "latest"
-    # - name: Install Az Module
-    #   run: Install-Module -Name Az -Repository PSGallery -Force
-    # - name: Update Az Module
-    #   run: Update-Module -Name Az -Force
-    - name: run powershell script
-      run: ./Untitled4.ps1
+    - name: Run Azure PowerShell Script File
+      uses: azure/powershell@v1
+      with:
+        inlineScript: ./Untitled4.ps1
+        azPSVersion: "latest"
      

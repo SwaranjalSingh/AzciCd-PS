@@ -2,7 +2,8 @@
 # Connect-AzAccount
  az login --username Swara@vikash252outlook.onmicrosoft.com --password Ss123456789@!
 # Get all VMs in the subscription
-$vmList = az vm list  
+$vmList = get-AzVM -Status
+
 # $VMStatuses = (Get-AzVM -ResourceGroupName $RGName -Name $VMName -Status). Statuses
 # Iterate through each VM
 foreach ($vm in $vmList) {
@@ -20,7 +21,5 @@ foreach ($vm in $vmList) {
     Write-Host "------------------------------"
 }
 # disConnect to your Azure account
-# disconnect-azaccount
-
-az logout
+disconnect-azaccount
 
